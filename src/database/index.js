@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize';
 import databaseConfig from '../config/database';
-import Aluno from '../models/Aluno';
-import User from '../models/User';
+import Aluno from '../models/Aluno'; // Tabela de Alunos
+import User from '../models/User'; // Tabela de Usuários
 
 const models = [Aluno, User];
 

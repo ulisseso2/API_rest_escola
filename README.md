@@ -4,6 +4,10 @@ Uma aprlicação onde criei API_rest para um sistema escolar.
 - Docker
 - MariaDB
 - nodemon
+- Sequelize
+- Bcryptjs
+- jsonwebtoken
+-
 
 Servidor Google Cloud Platform
 

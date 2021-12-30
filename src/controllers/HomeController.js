@@ -1,5 +1,6 @@
 import Aluno from '../models/Aluno';
 
+// CRUD de Alunos
 class HomeController {
   async index(req, res) {
     const novoAluno = await Aluno.create({

@@ -1,5 +1,6 @@
 import Sequelize, { Model } from 'sequelize';
 
+// Modela a tabela do Aluno no banco (sequelize)
 export default class Aluno extends Model {
   static init(sequelize) {
     super.init({

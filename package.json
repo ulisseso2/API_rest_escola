@@ -24,6 +24,7 @@
     "dotenv": "^10.0.0",
     "env": "^0.0.2",
     "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
     "mariadb": "^2.5.5",
     "sequelize": "^6.12.4"
   }

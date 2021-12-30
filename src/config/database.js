@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+// Usa as Informações do .env para conectar ao MariaDB
 module.exports = {
   dialect: 'mariadb',
   host: process.env.DATABASE_HOST,

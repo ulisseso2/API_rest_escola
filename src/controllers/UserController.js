@@ -1,5 +1,6 @@
 import User from '../models/User';
 
+// CRUD de Usuários
 class UserController {
   async store(req, res) {
     try {
@@ -9,11 +10,11 @@ class UserController {
     } catch (e) {
       return res.status(400).json({
         errors: e.errors.map((err) => err.message),
-      });
+      }); // cria usuário
     }
   }
 
-  // Index
+  // Index - Exibe todos
   async index(req, res) {
     try {
       const users = await User.findAll();
@@ -23,7 +24,7 @@ class UserController {
     }
   }
 
-  // Show
+  // Show - exibe 1 usando o ID
   async show(req, res) {
     try {
       const user = await User.findByPk(req.params.id); // Busca pela primeira chave
@@ -33,7 +34,7 @@ class UserController {
     }
   }
 
-  // update
+  // update - Atualiza 1 isando o ID
   async update(req, res) {
     try {
       if (!req.params.id) {
@@ -47,10 +48,12 @@ class UserController {
       if (!user) {
         return res.status(400).json({
           errors: ['Usuário não existe'],
-        });
+        }); // Valida existência do ID
       }
 
+      // Edita o dado informado do body
       const novosDados = await user.update(req.body);
+
       return res.json(novosDados);
     } catch (e) {
       return res.status(400).json({
@@ -59,7 +62,7 @@ class UserController {
     }
   }
 
-  // update
+  // Delete - apaga o usuário
   async delete(req, res) {
     try {
       if (!req.params.id) {

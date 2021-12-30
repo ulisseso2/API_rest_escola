@@ -1,6 +1,7 @@
 import Sequelize, { Model } from 'sequelize';
 import bcryptjs from 'bcryptjs';
 
+// Modela a tabela de Usuários no banco
 export default class User extends Model {
   static init(sequelize) {
     super.init({
@@ -44,7 +45,7 @@ export default class User extends Model {
       sequelize,
     });
 
-    this.addHook('beforeSave', async (user) => { // antes de salvar ele vai criar um hash de 8 caractéries
+    this.addHook('beforeSave', async (user) => { // antes de salvar ele vai criar um hash
       if (user.password) {
         user.password_hash = await bcryptjs.hash(user.password, 8);
       }
@@ -52,4 +53,8 @@ export default class User extends Model {
 
     return this;
   }
+
+  passwordIsValid(password) {
+    return bcryptjs.compare(password, this.password_hash);
+  } // método será usado no tokencontroller para comparar o password_hash
 }
