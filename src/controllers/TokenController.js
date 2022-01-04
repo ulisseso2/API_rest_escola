@@ -2,6 +2,8 @@ import jwt from 'jsonwebtoken';
 import User from '../models/User';
 
 // Log de usuário na plataforma
+// O token permitirá identificar alterações realizadas por cada usuário
+// Permitirá ainda definir permissões de edição
 class TokenController {
   async store(req, res) {
     const { email = '', password = '' } = req.body;
