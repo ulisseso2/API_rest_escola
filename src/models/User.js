@@ -15,7 +15,7 @@ export default class User extends Model {
           },
         },
       },
-      email: { // diferente do ALUNOS eu vou validar esses campos, então abri os dados recebidos
+      email: { // diferente do USUÀRIO eu vou validar esses campos, então abri os dados recebidos
         type: Sequelize.STRING,
         defaultValue: '',
         unique: {
