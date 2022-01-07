@@ -18,10 +18,10 @@ var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopReq
 
 const whiteList = [
   'https://escolareact.odisseiaonline.com.br',
-  'http://localhost:3000',
+  'http://localhost:3003',
 ];
 
-const corsOptions = {
+const corsOptions = { // Isso resolve um problema do chrome.
   origin(origin, callback) {
     if (whiteList.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
