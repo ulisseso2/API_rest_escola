@@ -7,7 +7,7 @@ const router = new Router();
 
 // As duas rotas abaixo foram criadas para exemplo de index e show, mas não devem existir em
 // aplicações normais, a menos que precisemos exibir os usuários.
-// router.get('/', loginRequired, userController.index);
+router.get('/', loginRequired, userController.index);
 // router.get('/:id', loginRequired, userController.show); // essa rota recebe o parâmetro ID
 
 router.post('/', userController.store); // os método aqui será store pois quero criar um usuário
