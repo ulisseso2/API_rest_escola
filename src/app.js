@@ -18,6 +18,8 @@ import fotoRoutes from './routes/fotoRoutes';
 const whiteList = [
   'https://escolareact.odisseiaonline.com.br',
   'http://localhost:3003',
+  'https://localhost:3003',
+  'http://localhost:3000',
 ];
 
 const corsOptions = { // Isso resolve um problema do chrome.
