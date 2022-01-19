@@ -10,7 +10,7 @@ const router = new Router();
 // router.get('/', loginRequired, userController.index);
 router.get('/:id', loginRequired, userController.show); // essa rota recebe o parâmetro ID
 
-router.post('/', loginRequired, userController.store); // os método aqui será store pois quero criar um usuário
+router.post('/', userController.store); // os método aqui será store pois quero criar um usuário
 router.put('/', loginRequired, userController.update); // essa rota atualiza o usuário
 router.delete('/', loginRequired, userController.delete);
 // Removi o ID de ('/:id') pois o acesso será apenas do próprio usuário e será validado por token

@@ -10,7 +10,7 @@ const router = new (0, _express.Router)();
 // router.get('/', loginRequired, userController.index);
 router.get('/:id', _loginRequired2.default, _UserController2.default.show); // essa rota recebe o parâmetro ID
 
-router.post('/', _loginRequired2.default, _UserController2.default.store); // os método aqui será store pois quero criar um usuário
+router.post('/', _UserController2.default.store); // os método aqui será store pois quero criar um usuário
 router.put('/', _loginRequired2.default, _UserController2.default.update); // essa rota atualiza o usuário
 router.delete('/', _loginRequired2.default, _UserController2.default.delete);
 // Removi o ID de ('/:id') pois o acesso será apenas do próprio usuário e será validado por token
